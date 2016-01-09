@@ -1,0 +1,11 @@
+#compiled source
+*.pyc
+
+settings.py
+
+*.json
+
+media/temp
+
+#logs and database
+*.sqlite

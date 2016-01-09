@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>{{ flatpages.title }}</title>
+</head>
+<body>
+	<form method="get" action="/search/">
+		<p><label for="id_q">Search:</label>
+		<input type="text" name="q" id="id_q" />
+		<input type="submit" value="submit" /></p>
+	</form>	
+	<h1>{{flatpage.title }}</h1>
+		<div>{{ flatpage.content }}	</div>
+		<div>
+			{% load flatpages %}
+			{% get_flatpages as flatpages %}
+			<ul>
+			    {% for page in flatpages %}
+			        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+			    {% endfor %}
+			</ul>
+		</div>	
+</body>
+</html>	
